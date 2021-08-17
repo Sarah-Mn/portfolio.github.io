@@ -1,0 +1,330 @@
+*{
+    font-family: Anton, serif;
+}
+
+.nav-link{
+    font-size: 1.5rem;
+}
+
+.container-fluid{
+    
+    padding: 0px;
+}
+
+.parallax{
+    background-image: url('../images/flower.JPG');
+    min-height: 100vh;
+    
+}
+
+.parallax-2{
+    background-image: url('../images/jungle.JPG');
+    min-height: 70vh;
+}
+
+.parallax-3{
+    background-image: url('../images/alonetree.JPG');
+    min-height:60vh;
+}
+
+.parallax-4{
+    background-image: url('../images/tree.jpg');
+    min-height:60vh;
+}
+
+.parallax-5{
+    background-image: url('../images/fire2.jpg');
+    min-height:100vh;
+}
+
+.parallax, .parallax-2, .parallax-3, .parallax-4, .parallax-5{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+    position: relative;
+}
+
+.border-1{
+    background-color: black;
+    font-size:1.5rem;
+    color: white;
+    padding: 1rem;
+    letter-spacing:.3rem;
+    border:0;
+    font-size: 1.5rem;
+}
+
+.border-1:hover{
+    box-shadow: #282E34;
+}
+
+.caption, .caption1{
+    position: absolute;
+    top:50%;
+    left:0;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes mymove {
+    from{z-index: 10000;}
+    to {z-index: -10000;}
+   }
+
+
+.paragraph{
+    text-align: justify;
+    background-color: white;
+    padding: 5rem 4.5rem;
+    padding-bottom:3rem;
+}
+
+
+.paragraph p{
+    font-size:1.5rem;
+    padding-top:1rem;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+.paragraph-2, .paragraph-3, .paragraph-4{
+    background-color:#282E34;
+    color:#ddd;
+    padding: 3rem 5rem;
+    font-size:1rem;
+}
+
+.paragraph-2{
+    font-size:4rem;
+    padding: 3rem 2rem;
+}
+
+.paragraph-4{
+    padding: 3rem 2rem; 
+}
+
+.border-2{
+    background-color: transparent;
+    font-size:2rem;
+    color: white;
+    padding: 1rem;
+    letter-spacing:.3rem;
+    text-transform: uppercase;
+}
+
+#about-me, #skills, #education, #contact{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color:#001219;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    font-size:22px;
+    text-transform: uppercase;
+    text-align: center;
+    display: none;
+    text-decoration: none;
+    color: #e5eeeb;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    padding-top:2%;
+    border:4px solid #dfe1e4;
+}
+
+
+#skills{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation:skills 2s forwards;
+}
+
+#education{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation:education 2s forwards;
+}
+
+#about-me{
+    animation:about-me 2s forwards;
+}
+
+#contact{
+    animation:contact 2s forwards;
+}
+
+.active:hover{
+    background-color: #00172f;
+    
+} 
+
+
+ .keys{
+    background-color:black;
+    width:100vh;
+    height:50vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: -1000;
+    margin: 0 auto;
+    
+}
+
+
+@keyframes skills {
+    from {top:55%; left:50%; opacity: 0;}
+    to {top:55%; left:75%; opacity: 1;}
+  }
+
+  @keyframes about-me {
+    from {top:50%; left:50%; opacity: 0;}
+    to {top:30%; left:50%; opacity: 1;}
+  }
+
+
+  @keyframes education {
+    from {top:55%; left:50%; opacity: 0;}
+    to {top:55%; left:25%; opacity: 1;}
+  }
+
+  @keyframes contact {
+    from {top:50%; left:50%; opacity: 0;}
+    to {top:80%; left:50%; opacity: 1;}
+  }
+
+  @keyframes z-index {
+      from {z-index:1000}
+      to {z-index: -1000;}
+  }
+
+
+   @keyframes text{
+      from {opacity: 1;}
+      to {opacity:0;}
+  }
+
+
+  .scroll, .btn-about-me, .btn-skills, .btn-education, .btn-contact{
+      background-image: url('../images/arrow.svg');
+      background-color:rgb(49, 7, 7);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 3rem;
+      height: 3rem;
+      border:0;
+      border-radius:50%;
+      position: fixed;
+      right:.5rem;
+      bottom:.5rem;
+      cursor: auto !important;
+      opacity: 0;
+      transition: opacity 0.5s;
+  }
+
+  .btn-about-me{
+      background-image:none;
+      background-color: #00171f;
+      left:.5rem;
+      top:1rem;
+      transition: opacity .5s;
+      padding-top: .4rem;
+  }
+
+  .btn-skills{
+    background-image:none;
+    background-color: #00171f;
+    left:.5rem;
+    top:4.2rem;
+    transition: opacity 1.2s;
+    padding-top: .4rem;
+  }
+
+  .btn-education{
+    background-image: none;
+    background-color: #00171f;
+    left:.5rem;
+    top:7.4rem;
+    transition: opacity 1.5s;
+    padding-top: .4rem;
+  }
+
+  .btn-contact{
+    background-image:none;      
+    background-color: #00171f;
+    left: .5rem;
+    top:10.6rem;
+    transition: opacity 2s;
+    padding-top: .4rem;
+  }
+
+  .scroll.show{
+      cursor: pointer !important;
+      opacity: 1;
+      z-index: 2000;
+  }
+
+
+  .paragraph-2 .list-icon li i:hover{
+      color:white;
+  }
+
+  .paragraph-2 img{
+      float: left;
+  }
+
+
+  .paragraph-4 i{
+      font-size:3rem;
+      margin-right: 1rem;
+  }
+
+  .paragraph-4 a:nth-child(1):hover{
+      color:#0088cc;
+  }
+  
+  .paragraph-4 a:nth-child(3):hover{
+      color:#0077b5;
+  }
+  .paragraph-4 a:nth-child(2):hover{
+      color:#c5283d;
+  }
+
+  .paragraph-4 a{
+      text-decoration: none;
+      color:white;
+  }
+
+
+  @media (max-width:576px){
+      .caption{
+          display:none;
+      }
+
+      .scroll{
+          display:none;
+      }
+
+
+      .parallax{
+          display:none;
+      }
+
+  }
+
+  @media (min-width:576px){
+      .navbar{
+          display:none;
+      }
+  }
+
+  @media(min-width:576px) and (max-width:850px){
+    #about-me, #skills, #education, #contact{
+        width: 130px;
+        height: 130px;
+        font-size:22px;
+      }
+  }
